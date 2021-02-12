@@ -128,7 +128,7 @@ Query Parameters: `limit` (optional) is the maximum number of categories to be r
 Example Request: `GET /api/categories?limit=3`,  
 Example Response Body:
 
-```json
+```jsonc
 [
   {
     "id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -160,7 +160,7 @@ Authentication: "access_token" cookie,
 Description: Creates a category,  
 Example Request Body:
 
-```json
+```jsonc
 {
   "name": "Category name",
   "description": "This is a description of the category, bla bla bla, yada yada yada"
@@ -175,7 +175,7 @@ Description: Searches through categories,
 Example Request: `GET /api/categories/search?query=and&limit=3`,  
 Example response:
 
-```json
+```jsonc
 [
   {
     "id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -213,7 +213,7 @@ Query Parameters:
 Example Request: `GET /api/categories/c3627f3b-7d51-4905-b3a3-553fb5b90810?filter=completed&limit=3`  
 Example Response Body:
 
-```json
+```jsonc
 {
   "id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
   "name": "Health and Fitness",
@@ -258,7 +258,7 @@ Authentication: "access_token" cookie,
 Description: Updates category with id `cat_id`,  
 Example Request Body:
 
-```json
+```jsonc
 {
   "name": "updated",
   "description": "this category has been updated"
@@ -278,7 +278,7 @@ Authentication: "access_token" cookie,
 Description: Gets all todos under category `cat_id`,  
 Example Request: `GET /api/categories/c3627f3b-7d51-4905-b3a3-553fb5b90810/todos?filter=completed&limit=3`
 Example Response Body:
-```json
+```jsonc
 [
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -322,7 +322,7 @@ Query Parameters:
 Example Request: `GET /api/categories/c3627f3b-7d51-4905-b3a3-553fb5b90810/todos/search?query=and&filter=incomplete&limit=3`
 Example Response Body:
 
-```json
+```jsonc
 [
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -360,7 +360,7 @@ Authentication: "access_token" cookies,
 Description: Creates todo under category `cat_id`,  
 Example Request Body:
 
-```json
+```jsonc
 // POST /api/categories/c3627f3b-7d51-4905-b3a3-553fb5b90810/todos
 {
   // cat_id will automatically be inserted
@@ -378,7 +378,7 @@ Description: Get todo with id of `todo_id` under category `cat_id`,
 Example Request: `GET /api/categories/c3627f3b-7d51-4905-b3a3-553fb5b90810/todos/b6809348-3623-4ddc-b87c-d759e9fc410d`
 Example Response Body:
 
-```json
+```jsonc
 {
   "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
   "id": "b6809348-3623-4ddc-b87c-d759e9fc410d",
@@ -402,7 +402,7 @@ Authentication: "access_token" cookie,
 Description: Updates todo with id `todo_id` under category `cat_id`,  
 Example request:
 
-```json
+```jsonc
 {
 
   "title": "Updated",
@@ -428,7 +428,7 @@ Query Parameters:
 
 Example Request: `GET /api/todos?filter=none&limit=3`
 Example Response Body:
-```json
+```jsonc
 [
   {
     "cat_id": "96756e2b-4ede-4971-9056-fa89800fc867",
@@ -472,7 +472,7 @@ Query Parameters:
 Example Request: `GET /api/todos/search?query=and&filter=none&limit=4`
 Example Response Body:
 
-```json
+```jsonc
 [
   {
     "cat_id": "96756e2b-4ede-4971-9056-fa89800fc867",
