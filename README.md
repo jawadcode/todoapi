@@ -518,4 +518,4 @@ Although, I had heard that actix was the preferred web framework in rust so I de
 
 SQLx was next on my list which I learnt by remaking the previous (actix) project but [using an actually persistent database](https://github.com/jawadcode/basic-todoapi-actix-sqlx) (with the help of [this example](https://github.com/actix/examples/tree/master/sqlx_todo)) one thing that was really helpful was that the macros could connect to the DB and ensure the queries were type safe. Now that I knew: the language, a web framework, and a database toolkit, I decided it was time to jump into the big project.
 
-TL;DR Rust is the best language I have ever learnt.
+TL;DR Rust is the best language I have ever used.
