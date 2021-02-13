@@ -135,21 +135,21 @@ Example Response Body:
     "name": "Health and Fitness",
     "description": "Dieting and Exercising goals",
     "created_at": "1970-01-01T00:00:00.000Z", // ISO 8601
-    "edited_at": "1970-01-01T00:00:01.000Z" // ISO 8601
+    "updated_at": "1970-01-01T00:00:01.000Z" // ISO 8601
   },
   {
     "id": "1ef661e7-8c5c-486d-8a8c-a09c4ef896c5",
     "name": "School",
     "description": "Homework, assignments, exam dates etc",
     "created_at": "1970-01-01T00:00:02.000Z",
-    "edited_at": "1970-01-01T00:00:03.000Z"
+    "updated_at": "1970-01-01T00:00:03.000Z"
   },
   {
     "id": "a86292f8-d33f-4b6f-9390-076c93634fc0",
     "name": "Work",
     "description": "Work things",
     "created_at": "1970-01-01T00:00:04.000Z",
-    "edited_at": "1970-01-01T00:00:05.000Z"
+    "updated_at": "1970-01-01T00:00:05.000Z"
   }
 ]
 ```
@@ -182,21 +182,21 @@ Example response:
     "name": "Health and Fitness",
     "description": "Dieting and Exercising goals",
     "created_at": "1970-01-01T00:00:00.000Z", // ISO 8601
-    "edited_at": "1970-01-01T00:00:01.000Z" // ISO 8601
+    "updated_at": "1970-01-01T00:00:01.000Z" // ISO 8601
   },
   {
     "id": "1ef661e7-8c5c-486d-8a8c-a09c4ef896c5",
     "name": "School",
     "description": "Homework, assignments and exam dates etc",
     "created_at": "1970-01-01T00:00:02.000Z",
-    "edited_at": "1970-01-01T00:00:03.000Z"
+    "updated_at": "1970-01-01T00:00:03.000Z"
   },
   {
     "id": "a86292f8-d33f-4b6f-9390-076c93634fc0",
     "name": "Work",
     "description": "Work and things",
     "created_at": "1970-01-01T00:00:04.000Z",
-    "edited_at": "1970-01-01T00:00:05.000Z"
+    "updated_at": "1970-01-01T00:00:05.000Z"
   }
 ]
 ```
@@ -226,7 +226,7 @@ Example Response Body:
       "description": "Have cruciferous vegetables for dinner",
       "completed": true,
       "created_at": "1970-01-01T00:00:02.000Z",
-      "edited_at": "1970-01-01T00:00:02.000Z"
+      "updated_at": "1970-01-01T00:00:02.000Z"
     },
     {
       "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -235,7 +235,7 @@ Example Response Body:
       "description": "Go on bike ride around town",
       "completed": true,
       "created_at": "1970-01-01T00:00:03.000Z",
-      "edited_at": "1970-01-01T00:00:03.000Z"
+      "updated_at": "1970-01-01T00:00:03.000Z"
     },
     {
       "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -244,7 +244,7 @@ Example Response Body:
       "description": "Actually sleep",
       "completed": true,
       "created_at": "1970-01-01T00:00:04.000Z",
-      "edited_at": "1970-01-01T00:00:04.000Z"
+      "updated_at": "1970-01-01T00:00:04.000Z"
     }
   ],
   "created_at": "1970-01-01T00:00:00.000Z",
@@ -262,7 +262,7 @@ Example Request Body:
 {
   "name": "updated",
   "description": "this category has been updated"
-  // edited_at will be automatically set
+  // updated_at will be automatically set
 }
 ```
 
@@ -287,7 +287,7 @@ Example Response Body:
     "description": "Have cruciferous vegetables for dinner",
     "completed": true,
     "created_at": "1970-01-01T00:00:02.000Z",
-    "edited_at": "1970-01-01T00:00:02.000Z"
+    "updated_at": "1970-01-01T00:00:02.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -296,7 +296,7 @@ Example Response Body:
     "description": "Go on bike ride around town",
     "completed": true,
     "created_at": "1970-01-01T00:00:03.000Z",
-    "edited_at": "1970-01-01T00:00:03.000Z"
+    "updated_at": "1970-01-01T00:00:03.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -305,7 +305,7 @@ Example Response Body:
     "description": "Actually sleep",
     "completed": true,
     "created_at": "1970-01-01T00:00:04.000Z",
-    "edited_at": "1970-01-01T00:00:04.000Z"
+    "updated_at": "1970-01-01T00:00:04.000Z"
   }
 ]
 ```
@@ -331,7 +331,7 @@ Example Response Body:
     "description": "cheese and beans",
     "completed": true,
     "created_at": "1970-01-01T00:00:05.000Z",
-    "edited_at": "1970-01-01T00:00:05.000Z"
+    "updated_at": "1970-01-01T00:00:05.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -340,7 +340,7 @@ Example Response Body:
     "description": "Do streches and go on bike ride",
     "completed": true,
     "created_at": "1970-01-01T00:00:06.000Z",
-    "edited_at": "1970-01-01T00:00:06.000Z"
+    "updated_at": "1970-01-01T00:00:06.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -349,7 +349,7 @@ Example Response Body:
     "description": "Drink warm milk and sleep early",
     "completed": true,
     "created_at": "1970-01-01T00:00:07.000Z",
-    "edited_at": "1970-01-01T00:00:07.000Z"
+    "updated_at": "1970-01-01T00:00:07.000Z"
   }
 ]
 ```
@@ -386,7 +386,7 @@ Example Response Body:
   "description": "cheese and beans",
   "completed": true,
   "created_at": "1970-01-01T00:00:05.000Z",
-  "edited_at": "1970-01-01T00:00:10.000Z"
+  "updated_at": "1970-01-01T00:00:10.000Z"
 }
 ```
 
@@ -408,7 +408,7 @@ Example request:
   "title": "Updated",
   "description": "this has been updated",
   "completed": true,
-  // edited_at will be automatically set
+  // updated_at will be automatically set
 }
 ```
 
@@ -437,7 +437,7 @@ Example Response Body:
     "description": "finish homework sheets and essay",
     "completed": false,
     "created_at": "1970-01-01T00:00:11.000Z",
-    "edited_at": "1970-01-01T00:00:11.000Z"
+    "updated_at": "1970-01-01T00:00:11.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -446,7 +446,7 @@ Example Response Body:
     "description": "Do streches and go on bike ride",
     "completed": true,
     "created_at": "1970-01-01T00:00:06.000Z",
-    "edited_at": "1970-01-01T00:00:06.000Z"
+    "updated_at": "1970-01-01T00:00:06.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -455,7 +455,7 @@ Example Response Body:
     "description": "Drink warm milk and sleep early",
     "completed": true,
     "created_at": "1970-01-01T00:00:07.000Z",
-    "edited_at": "1970-01-01T00:00:07.000Z"
+    "updated_at": "1970-01-01T00:00:07.000Z"
   }
 ]
 ```
@@ -481,7 +481,7 @@ Example Response Body:
     "description": "finish homework sheets and essay",
     "completed": false,
     "created_at": "1970-01-01T00:00:11.000Z",
-    "edited_at": "1970-01-01T00:00:11.000Z"
+    "updated_at": "1970-01-01T00:00:11.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -490,7 +490,7 @@ Example Response Body:
     "description": "Do streches and go on bike ride",
     "completed": true,
     "created_at": "1970-01-01T00:00:06.000Z",
-    "edited_at": "1970-01-01T00:00:06.000Z"
+    "updated_at": "1970-01-01T00:00:06.000Z"
   },
   {
     "cat_id": "c3627f3b-7d51-4905-b3a3-553fb5b90810",
@@ -499,7 +499,7 @@ Example Response Body:
     "description": "Drink warm milk and sleep early",
     "completed": true,
     "created_at": "1970-01-01T00:00:07.000Z",
-    "edited_at": "1970-01-01T00:00:07.000Z"
+    "updated_at": "1970-01-01T00:00:07.000Z"
   }
 ]
 ```
