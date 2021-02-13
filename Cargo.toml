@@ -7,3 +7,11 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web = "3"
+serde = { version = "1", features = ["derive"] }
+sqlx = { version = "0.4", features = ["runtime-actix-native-tls", "postgres"] }
+rust-argon2 = "0.8"
+jsonwebtoken = "7"
+anyhow = "1"
+dotenv = "0"
+pretty_env_logger = "0.4"
