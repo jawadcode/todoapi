@@ -41,6 +41,10 @@ CREATE TABLE IF NOT EXISTS todos (
 			REFERENCES categories(id)
 );
 
+DROP TRIGGER IF EXISTS tsvectorupdate ON categories;
+
+DROP TRIGGER IF EXISTS tsvectorupdate ON todos;
+
 CREATE TRIGGER tsvectorupdate BEFORE INSERT OR UPDATE
 ON categories FOR EACH ROW EXECUTE PROCEDURE
 tsvector_update_trigger(tsv, 'pg_catalog.english', name, description);
