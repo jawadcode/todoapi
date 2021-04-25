@@ -1,6 +1,3 @@
--- DB must have pgcrypto extension as a prerequisite
--- Queries **MUST** be separated by two newlines as shown below
-
 CREATE TABLE IF NOT EXISTS users (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	displayname TEXT,
