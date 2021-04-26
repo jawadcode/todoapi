@@ -21,6 +21,7 @@ jsonwebtoken = "7"
 rand = { version = "0.8", features = ["std_rng"] }
 base64 = "0.13"
 fancy-regex = "0.5"
+lazy_static = "1"
 anyhow = "1"
 dotenv = "0"
 pretty_env_logger = "0.4"

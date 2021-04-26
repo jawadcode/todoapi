@@ -2441,6 +2441,7 @@ dependencies = [
  "dotenv",
  "fancy-regex",
  "jsonwebtoken",
+ "lazy_static",
  "pretty_env_logger",
  "r2d2",
  "rand 0.8.3",

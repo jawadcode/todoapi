@@ -2,33 +2,24 @@ use serde::Serialize;
 
 pub mod internal_server;
 pub mod validation;
+
 #[derive(Serialize)]
-pub enum ErrorCategory {
+#[serde(untagged)]
+/// Represents all the different error categories
+pub enum ErrorCategories {
     ValidationError(validation::ValidationError),
     InternalServerError(internal_server::InternalServerError),
 }
 
+/// The actual error
 #[derive(Serialize)]
 pub struct ApplicationError {
     pub kind: &'static str,
-    pub body: ErrorCategory,
+    pub body: ErrorCategories,
 }
 
+/// Wrapper struct so we can have `{"error":{...}}` instead of just `{...}`
 #[derive(Serialize)]
 pub struct Error {
     pub error: ApplicationError,
-}
-
-impl Error {
-    pub fn from_category(err: ErrorCategory) -> Self {
-        Error {
-            error: ApplicationError {
-                kind: match &err {
-                    ErrorCategory::ValidationError(_) => "ValidationError",
-                    ErrorCategory::InternalServerError(_) => "InternalServerError",
-                },
-                body: err,
-            },
-        }
-    }
 }

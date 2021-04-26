@@ -35,12 +35,14 @@ pub enum ErrorVariants {
     PasswordWeak,
 }
 
-pub fn variants_to_error(err: ErrorVariants) -> ValidationError {
-    match err {
-        ErrorVariants::DisplaynameLength => DISPLAYNAME_LENGTH,
-        ErrorVariants::UsernameLength => USERNAME_LENGTH,
-        ErrorVariants::EmailLength => EMAIL_LENGTH,
-        ErrorVariants::EmailInvalid => EMAIL_INVALID,
-        ErrorVariants::PasswordWeak => PASSWORD_WEAK,
+impl ErrorVariants {
+    pub fn to_validation_error(self) -> ValidationError {
+        match self {
+            ErrorVariants::DisplaynameLength => DISPLAYNAME_LENGTH,
+            ErrorVariants::UsernameLength => USERNAME_LENGTH,
+            ErrorVariants::EmailLength => EMAIL_LENGTH,
+            ErrorVariants::EmailInvalid => EMAIL_INVALID,
+            ErrorVariants::PasswordWeak => PASSWORD_WEAK,
+        }
     }
 }

@@ -1,5 +1,8 @@
 pub mod auth {
-    use crate::errors::internal_server::{ErrorVariants, InternalServerError};
+    use crate::errors::{
+        internal_server::{ErrorVariants, InternalServerError},
+        Error,
+    };
     use crate::models::user::*;
     use anyhow::Result;
     use rand::prelude::*;
@@ -11,10 +14,10 @@ pub mod auth {
         base64::encode_config(&bytes, base64::URL_SAFE)
     }
 
-    pub fn gen_auth_token(user: UserSafe) -> Result<String, InternalServerError> {
+    pub fn gen_auth_token(user: UserSafe) -> Result<String, Error> {
         match UserClaims::from_user_safe(user).to_token() {
             Ok(t) => Ok(t),
-            _ => Err(InternalServerError::from_variant(ErrorVariants::AuthError)),
+            _ => Err(ErrorVariants::AuthError.to_error()),
         }
     }
 }
