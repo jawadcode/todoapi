@@ -1,20 +1,20 @@
 CREATE TABLE IF NOT EXISTS users (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-	displayname TEXT,
-	username TEXT,
-	email TEXT,
-	password TEXT,
-	created_at BIGINT
+	displayname TEXT NOT NULL,
+	username TEXT UNIQUE NOT NULL,
+	email TEXT UNIQUE NOT NULL,
+	password TEXT NOT NULL,
+	created_at BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS categories (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-	user_id UUID,
-	name TEXT,
-	description TEXT,
+	user_id UUID NOT NULL,
+	name TEXT NOT NULL,
+	description TEXT NOT NULL,
 	tsv TSVECTOR,
-	created_at BIGINT,
-	updated_at BIGINT,
+	created_at BIGINT NOT NULL,
+	updated_at BIGINT NOT NULL,
 	CONSTRAINT fk_user
 		FOREIGN KEY(user_id)
 			REFERENCES users(id)
@@ -22,14 +22,14 @@ CREATE TABLE IF NOT EXISTS categories (
 
 CREATE TABLE IF NOT EXISTS todos (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-	user_id UUID,
-	cat_id UUID,
-	title TEXT,
-	description TEXT,
-	tsv TSVECTOR,
-	completed BOOLEAN,
-	created_at BIGINT,
-	updated_at BIGINT,
+	user_id UUID NOT NULL,
+	cat_id UUID NOT NULL,
+	title TEXT NOT NULL,
+	description TEXT NOT NULL,
+	tsv TSVECTOR NOT NULL,
+	completed BOOLEAN NOT NULL,
+	created_at BIGINT NOT NULL,
+	updated_at BIGINT NOT NULL,
 	CONSTRAINT fk_user
 		FOREIGN KEY(user_id)
 			REFERENCES users(id),

@@ -26,9 +26,11 @@ async fn main() -> Result<()> {
             .data(db_pool.clone())
             .data(redis_pool.clone())
             .service(
-                web::scope("/api")
-                    .route("/", web::get().to(helo))
-                    .service(web::scope("/users/auth").service(routes::auth::register)),
+                web::scope("/api").route("/", web::get().to(helo)).service(
+                    web::scope("/users/auth")
+                        .service(routes::auth::register)
+                        .service(routes::auth::login),
+                ),
             )
             .wrap(Logger::default())
     })

@@ -1,8 +1,5 @@
 use serde::Serialize;
-use std::{
-    error::Error,
-    fmt::{self, Display},
-};
+use std::{error, fmt};
 
 #[derive(Serialize, Debug)]
 /// An internal server error (there is no message/body because the client doesn't need extra info)
@@ -35,10 +32,10 @@ impl ErrorVariants {
     }
 }
 
-impl Display for InternalServerError {
+impl fmt::Display for InternalServerError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "kind: {}", self.kind)
+        write!(f, "InternalServerError {{ kind: {} }}", self.kind)
     }
 }
 
-impl Error for InternalServerError {}
+impl error::Error for InternalServerError {}

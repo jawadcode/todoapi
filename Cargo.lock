@@ -2448,8 +2448,11 @@ dependencies = [
  "redis",
  "rust-argon2",
  "serde",
+ "serde_json",
  "sqlx",
+ "time 0.2.25",
  "uuid",
+ "woothee",
 ]
 
 [[package]]
@@ -2838,6 +2841,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b2986deb581c4fe11b621998a5e53361efe6b48a151178d0cd9eeffa4dc6acc9"
 dependencies = [
  "winapi 0.3.9",
+]
+
+[[package]]
+name = "woothee"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "89d5a45c5d9c772e577c263597681448fd91a46aed911783394eec396e45d4ee"
+dependencies = [
+ "lazy_static",
+ "regex",
 ]
 
 [[package]]

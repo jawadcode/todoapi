@@ -1,5 +1,3 @@
-use serde::Serialize;
-
 type ValidationError = super::ValidationError;
 
 const DISPLAYNAME_LENGTH: ValidationError = ValidationError {
@@ -27,6 +25,7 @@ const PASSWORD_WEAK: ValidationError = ValidationError {
     message: "password must contain at least: 1 upper case letter, 1 lower case letter, 1 number or special character and must be between 8 and 128 characters in length",
 };
 
+/// The variants of an authentication validation error
 pub enum ErrorVariants {
     DisplaynameLength,
     UsernameLength,
@@ -36,6 +35,7 @@ pub enum ErrorVariants {
 }
 
 impl ErrorVariants {
+    /// Construct validation error from error variant
     pub fn to_validation_error(self) -> ValidationError {
         match self {
             ErrorVariants::DisplaynameLength => DISPLAYNAME_LENGTH,
